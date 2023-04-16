@@ -3,7 +3,6 @@ const { Post, Comment , User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async(req, res) => {
-
     try{
   
       res.render('dashboard');
