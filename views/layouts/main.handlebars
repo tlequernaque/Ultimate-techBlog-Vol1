@@ -11,6 +11,17 @@
 
 <body>
     <header>
+        <nav>
+            {{!-- {{#if logged_in}} --}}
+            <button onclick="window.location.href='/';" class="btn btn-primary" type="submit" href="/signup">Home</button>
+            <button onclick="window.location.href='/dashboard';" class="btn btn-primary" type="submit" href="/signup">Dashboard</button>
+            <button onclick="window.location.href='';" class="btn btn-primary" type="submit" href="/signup">Logout</button>
+            {{!-- {{else}} --}}
+            <button onclick="window.location.href='/login';" class="btn btn-primary" type="submit" href="/signup">Login</button>
+            {{!-- {{/if}} --}}
+            <h1>The Ultimate Tech Blog</h1>
+        </nav>
+
 
     </header>
 
@@ -20,6 +31,10 @@
     </main>
 
     <footer></footer>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
