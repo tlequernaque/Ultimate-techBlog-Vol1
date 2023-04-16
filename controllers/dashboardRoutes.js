@@ -6,7 +6,7 @@ router.get('/dashboard', async(req, res) => {
 
     try{
   
-      res.render('/dashboard');
+      res.render('dashboard');
   
     } catch(err){
       res.status(500).json(err);
