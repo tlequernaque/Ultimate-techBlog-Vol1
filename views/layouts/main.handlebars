@@ -12,13 +12,13 @@
 <body>
     <header>
         <nav>
-            {{!-- {{#if logged_in}} --}}
+            {{#if logged_in}}
             <button onclick="window.location.href='/';" class="btn btn-primary" type="submit" href="/signup">Home</button>
             <button onclick="window.location.href='/dashboard';" class="btn btn-primary" type="submit" href="/signup">Dashboard</button>
-            <button onclick="window.location.href='';" class="btn btn-primary" type="submit" href="/signup">Logout</button>
-            {{!-- {{else}} --}}
+            <button class="logout" onclick="window.location.href='';" class="btn btn-primary" type="submit" href="/signup">Logout</button>
+            {{else}}
             <button onclick="window.location.href='/login';" class="btn btn-primary" type="submit" href="/signup">Login</button>
-            {{!-- {{/if}} --}}
+            {{/if}}
             <h1>The Ultimate Tech Blog</h1>
         </nav>
 

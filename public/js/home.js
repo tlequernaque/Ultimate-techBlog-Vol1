@@ -5,21 +5,14 @@ const newFormHandler = async (event) => {
     const description = document.querySelector('#post-content').value.trim();
   
     if (name && description) {
-      console.log("name = ", name, "description = ", description);
-      const response = await fetch(`/api/posts`, {
+       await fetch(`/api/posts`, {
         method: 'POST',
         body: JSON.stringify({ name, description }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
-  
-      if (response.ok) {
-        alert("ok");
-        document.location.replace('/');
-      } else {
-        alert('unable to create post');
-      }
+      // document.location.reload()
     }
   };
   
