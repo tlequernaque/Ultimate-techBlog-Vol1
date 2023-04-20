@@ -3,7 +3,7 @@ const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
-  console.log( 'postss')
+  console.log(req.body)
   try {
     const newPost = await Post.create({
       ...req.body,
@@ -12,6 +12,7 @@ router.post('/', withAuth, async (req, res) => {
     console.log(newPost)
     res.status(200).json(newPost);
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });
