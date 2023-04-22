@@ -13,9 +13,9 @@
     <header>
         <nav>
             {{#if logged_in}}
-            <button onclick="window.location.href='/';" class="btn btn-primary" type="submit" href="/signup">Home</button>
-            <button onclick="window.location.href='/dashboard';" class="btn btn-primary" type="submit" href="/signup">Dashboard</button>
-            <button class="logout" onclick="window.location.href='';" class="btn btn-primary" type="submit" href="/signup">Logout</button>
+            <button onclick="window.location.href='/';" class="btn btn-primary" type="submit" >Home</button>
+            <button onclick="window.location.href='/dashboard';" class="btn btn-primary" type="submit" >Dashboard</button>
+            <button class="logout" onclick="window.location.href='/';" class="btn btn-primary" type="submit" >Logout</button>
             {{else}}
             <button onclick="window.location.href='/login';" class="btn btn-primary" type="submit" href="/signup">Login</button>
             {{/if}}

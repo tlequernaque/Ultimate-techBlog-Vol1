@@ -32,7 +32,7 @@ router.get('/post/:id', async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: ['id', 'content', 'post_id', 'user_username', 'created_at'],
+          attributes: ['id', 'content', 'post_id', 'created_at'],
           include:{
             model: User,
             attributes: ['username'],
@@ -48,7 +48,7 @@ router.get('/post/:id', async (req, res) => {
     const post = postData.get({ plain: true });
 
     res.render('post', {
-      posts,
+      post,
       logged_in: req.session.logged_in
     });
   } catch (err) {
