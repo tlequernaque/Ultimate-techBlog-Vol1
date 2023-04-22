@@ -5,20 +5,17 @@ const { Post, Comment , User } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all post and JOIN with user data
-    const postData = await Post.findAll({
 
+    const postData = await Post.findAll({
     });
 
-    // // Serialize data so the template can read it
-    
     const posts = postData.map((post) => post.get({ plain: true }));
-    
+
     for (const post of posts) {
-      post.createdAt = post.createdAt.toLocaleTimeString()
+      post.createdAt = post.createdAt.toLocaleDateString()
     }
     console.log(posts)
-    // Pass serialized data and session flag into template
+    
     res.render('homepage', {
       posts,
       logged_in: req.session.logged_in 
