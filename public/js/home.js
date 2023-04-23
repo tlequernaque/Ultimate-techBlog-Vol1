@@ -1,3 +1,8 @@
+const newPostBtn = document.getElementById("")
+
+
+
+
 const newFormHandler = async (event) => {
     event.preventDefault();
   
@@ -13,6 +18,9 @@ const newFormHandler = async (event) => {
         },
       });
     }
+    // if (res.status == 200) {
+    //     res.reload('/');
+    // }
   };
   
   
