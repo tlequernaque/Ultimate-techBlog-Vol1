@@ -2,8 +2,8 @@
   <h2>{{post.title}}</h2>
   <p>{{post.content}}</p>
   <p>Created by {{user.username}} on {{post.createdAt}}</p>
-    <button class="btn btn-primary">Update</button>
-    <button class="btn btn-primary">Delete</button>
+    {{!-- <button class="updatebtn btn btn-primary">Update</button>
+    <button class="btn btn-primary">Delete</button> --}}
   </p>
 </div>
 
@@ -16,6 +16,7 @@
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Update Comment</button>
       </div>
     </form>
   </div>

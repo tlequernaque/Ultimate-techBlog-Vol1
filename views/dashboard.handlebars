@@ -1,6 +1,28 @@
 <h2>Dashboard</h2>
 
+<div class="text-center">
+  <h2>{{post.title}}</h2>
+  <p>{{post.content}}</p>
+  <p>Created by {{user.username}} on {{post.createdAt}}</p>
+    <button class="updatebtn btn btn-primary">Update</button>
+    <button class="btn btn-primary">Delete</button>
+  </p>
+</div>
 
+<div class="row mt-4">
+  <div class="col-md-6">
+    <form class="form new-post-form">
+      <div class="form-group">
+        <h3>Comment</h3>
+        <textarea class="form-input" id="post-content" name="post-content"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Update Comment</button>
+      </div>
+    </form>
+  </div>
+</div>
 
 
 <div class="row mt-4">
