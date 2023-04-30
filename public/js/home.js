@@ -1,8 +1,3 @@
-const newPostBtn = document.getElementById("")
-
-
-
-
 const newFormHandler = async (event) => {
     event.preventDefault();
   
